@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Facecuck</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<style>
+		.post{
+			border: 1px solid rgba(0,0,0,0.3);
+			padding: 10px 10px;
+			width:70%;
+			box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+			transition: box-shadow .2s;
+		}
+		.post:hover{
+			box-shadow: 4px 4px 3px rgba(0,0,0,0.5);
+		}
+		.post-detail{
+			border: 1px solid rgba(0,0,0,0.3);
+			padding: 10px 10px;
+			width:70%;
+			box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+			margin: 5% auto auto auto;
+		}
+		.post_text{
+			padding: 10px 10px;
+			border: 1px solid rgba(0,0,0,0.3);
+			box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+			width: 70%;
+			height: 20%;
+		}
+	</style>
+</head>
+<body>
+	<header class="bg-primary py-2">
+		<h1 class="h4 text-white ml-3">
+			<i class="fab fa-facebook"></i>
+			<a class="text-white" href="http://127.0.0.1:8000">Facecuck</a>
+		</h1>
+	</header>
+	
+	{% block content %}
+	{% endblock %}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

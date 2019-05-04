@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="container py-3">
+	<div id="new_post" class="pt-3 pl-3 mb-3 pb-3" style="background: rgba(108,117,105,.2);">
+		<a href="/post/new"><textarea class="post_text" placeholder="Ta pensando em quê? 🌝"></textarea></a>
+		<br>
+	</div>
+	{% for post in posts %}
+		<div class="post bg-light mb-3">
+			<h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h2>
+			<p>{{post.text | linebreaksbr}}</p>
+			<p>Publicado em: {{post.published_date}}</p>
+		</div>
+	{% endfor %}
+</div>
+{% endblock %}

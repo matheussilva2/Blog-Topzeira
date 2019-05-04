@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+	<div class="post-detail">
+		<h2>{{ post.title }}</h2>
+		<p>{{ post.text|linebreaksbr }}</p>
+		{% if post.published_date %}
+		<div class="post_date">
+			<span>Por {{post.author}} em {{ post.published_date }}</span>
+		</div>
+		{% endif %}
+		<a href="{% url 'post_edit' %}">Editar | </a>
+		<a href="../..">Voltar para os posts</a>
+	</div>
+{% endblock %}
